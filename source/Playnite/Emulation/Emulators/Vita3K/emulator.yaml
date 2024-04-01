@@ -3,6 +3,12 @@ Name: Vita3K
 Website: 'https://vita3k.org/'
 Profiles:
   - Name: Default
+    Platforms: [sony_vita]
+    ProfileFiles: ['qt\plugins\platforms\qwindows.dll']
+    StartupExecutable: ^Vita3K.*\.exe$
+    StartupArguments: '-r "{InstallDirName}"'
+    ScriptGameImport: true
+  - Name: Default VPK
     StartupArguments: '"{ImagePath}"'
     Platforms: [sony_vita]
     ImageExtensions: [vpk]
